@@ -1,0 +1,614 @@
+/* Typography Classes */
+.body-font-size {
+    font-size: var(--body-font-size);
+}
+
+.body-large-font-size {
+    font-size: var(--body-large-font-size);
+}
+
+.body-small-font-size {
+    font-size: var(--body-small-font-size);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-color-primary {
+    color: var(--font-color-primary);
+}
+
+.font-color-black {
+    color: var(--font-color-black);
+}
+
+.font-color-white {
+    color: var(--font-color-white);
+}
+.font-color-foreground {
+    color: var(--font-color-foreground);
+}
+
+.font-color-success {
+    color: var(--font-color-success);
+}
+
+.font-color-error {
+    color: var(--font-color-error);
+}
+
+.font-color-white {
+    color: var(--font-color-white);
+}
+
+.font-color-black {
+    color: var(--font-color-black);
+}
+
+.font-weight-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.font-weight-semi-bold {
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.font-weight-regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.font-weight-light {
+    font-weight: var(--font-weight-light);
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-padding-top: var(--navbar-height); /* Adjust for navbar height */
+    
+    
+}
+
+/* Global Custom Propeties */
+
+:root {
+
+    /* Default NavBar height */
+    --navbar-height: 80px; 
+
+    /* Colour Pallete */
+    --off-black-color: #1A1A1A; 
+    --off-white-color: #FEFFF9; 
+    --main-background-color: #FEFFF9;
+    --secondary-background-color: #1A1A1A;
+    --main-foreground-color: #285729; 
+    --secondary-foreground-color: #367336;  
+    --accent-color: #FDFBE6;
+    --success-color: green;
+    --error-color: rgb(255, 0, 0); 
+
+    /* Padding */ 
+    --xs-padding: 0.25rem;
+    --s-padding: 0.5rem;
+    --m-padding: 1rem;
+    --l-padding: 1.5rem;
+    --xl-padding: 2rem;
+    --xxl-padding: 2.5rem;
+    --xxxl-padding: 3rem;
+
+    /* Spacing */ 
+    --xs-gap: 0.25rem; 
+    --s-gap: 0.5rem;   
+    --m-gap: 1rem;    
+    --l-gap: 1.5rem;   
+    --xl-gap: 2rem;    
+    --xxl-gap: 2.5rem;
+    --xxxl-gap: 3rem;
+    --xxxxl-gap: 3.5rem;
+    --xxxxxl-gap: 4rem;
+
+    /* Typography */
+
+    --heading-gap: 0.5rem; 
+    
+    --heading-line-height: 1.2;
+    --body-line-height: 1.6;
+
+    --font-color-black: var(--off-black-color); 
+    --font-color-white: var(--off-white-color);
+    --font-color-primary: var(--accent-color);
+    --font-color-success: var(--success-color);
+    --font-color-error: var(--error-color);
+    --font-color-foreground: var(--main-foreground-color);
+
+    --font-weight-bold: 700; 
+    --font-weight-semi-bold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+
+
+    --heading-font: 'HeadingCustomFont', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --body-font: 'BodyCustomFont', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; 
+
+    /* Buttons */
+    --button-padding: 0.5rem 1rem;
+    --button-primary-background-color: var(--accent-color);
+    --button-secondary-background-color: var(--main-foreground-color);
+    --button-tertiary-background-color: var(--secondary-background-color);
+
+
+    /* Shadows */
+    --shadow-small: 0 4px 4px rgba(0, 0, 0, 0.05);
+    --shadow-regular: 0 4px 4px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 4px rgba(0, 0, 0, 0.15);
+    --shadow-large: 0px 4px 4px rgba(0, 0, 0, 0.2);
+
+    --card-shadow-regular: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    --card-shadow-large: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    
+    /* Z-Index */
+    --z-index-default: 1;
+    --z-index-dropdown: 1000;
+    --z-index-modal: 1050;
+    --z-index-tooltip: 1070;
+
+    /* Rounded Corners */ 
+    --rounded-corners: 0.25rem;
+
+    /* Hover Opacity */ 
+    --hover-opacity: 0.8;
+
+    
+
+}
+
+/* Custom Fonts */
+
+@font-face {
+    font-family: 'HeadingCustomFont';
+    src: url('../public/fonts/noto-heading-font.woff2') format('woff2'),
+         url('../public/fonts/noto-heading-font.woff') format('woff');
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'BodyCustomFont';
+    src: url('../public/fonts/noto-body-font.woff2') format('woff2'),
+         url('../public/fonts/noto-body-font.woff') format('woff');
+    font-display: swap; 
+} 
+
+@font-face {
+    font-family: 'BodyCustomFont';
+    src: url('../public/fonts/noto-body-font-italic.woff2') format('woff2'),
+         url('../public/fonts/noto-body-font-italic.woff') format('woff');
+    font-style: italic;
+    font-display: swap; 
+}
+
+/* Breakpoints */ 
+
+/* Media Query for Small Phones */
+@media (max-width: 479px) {
+    :root {
+        /* Section Padding */ 
+        --main-section-vertical-padding: 1.5rem; 
+        --sub-section-vertical-padding: 1rem;
+        --section-horizontal-padding: 1rem;
+        
+        /* Minor Second Mobile Scale CSS */
+        --h1-font-size: 1.625rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.375rem;
+        --h4-font-size: 1.25rem;
+        --h5-font-size: 1.125rem;
+        --h6-font-size: 1rem;
+        --body-large-font-size: 1rem;
+        --body-font-size: 0.875rem;
+        --body-small-font-size: 0.75rem;
+        --body-extra-small-font-size: 0.625rem;
+        --footer-h2-font-size: 0.875rem;
+        --footer-h3-font-size: 0.75rem;
+
+        /* CSS Grid */
+        --grid-columns: repeat(4, minmax(0px, 1fr));
+        --grid-column-gutter: 1rem;
+        --grid-gap: 1rem;
+    }
+}
+
+/* Media Query for Large Phones */
+@media (min-width: 480px) and (max-width: 767px) {
+    :root {
+        /* Section Padding */ 
+        --main-section-vertical-padding: 1.5rem; 
+        --sub-section-vertical-padding: 1rem;
+        --section-horizontal-padding: 1.5rem; 
+        
+        /* Minor Second Scale CSS */
+        --h1-font-size: 1.75rem;
+        --h2-font-size: 1.625rem;
+        --h3-font-size: 1.5rem;
+        --h4-font-size: 1.375rem;
+        --h5-font-size: 1.25rem;
+        --h6-font-size: 1.125rem;
+        --body-large-font-size: 1.125rem;
+        --body-font-size: 1rem;
+        --body-small-font-size: 0.875rem;
+        --body-extra-small-font-size: 0.75rem;
+        --footer-h2-font-size: 1.125rem;
+        --footer-h3-font-size: 1rem;
+
+        /* CSS Grid */
+        --grid-columns: repeat(4, minmax(0px, 1fr));
+        --grid-column-gutter: 1rem;
+        --grid-gap: 1rem;
+    }
+}
+
+/* Media Query for Tablets */
+@media (min-width: 768px) and (max-width: 1279px) {
+    :root {
+        /* Section Padding */ 
+        --main-section-vertical-padding: 2rem; 
+        --sub-section-vertical-padding: 1.5rem;
+        --section-horizontal-padding: 2rem; 
+
+        /* Major Second Scale CSS */
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.5rem;
+        --h4-font-size: 1.375rem;
+        --h5-font-size: 1.25rem;
+        --h6-font-size: 1.125rem;
+        --body-large-font-size: 1.125rem;
+        --body-font-size: 1rem;
+        --body-small-font-size: 0.875rem;
+        --body-extra-small-font-size: 0.75rem;
+        --footer-h2-font-size: 1.125rem;
+        --footer-h3-font-size: 1rem;
+
+        /* CSS Grid */
+        --grid-columns: repeat(8, minmax(0px, 1fr));
+        --grid-column-gutter: 1.5rem;
+        --grid-gap: 1.5rem; 
+    }
+}
+
+/* Media Query for Large Desktops */
+@media (min-width: 1280px) {
+    :root {
+        /* Section Padding */ 
+        --main-section-vertical-padding: 3rem; 
+        --sub-section-vertical-padding: 2rem;
+        --section-horizontal-padding: 2.5rem;
+
+        /* Minor Third Scale CSS */
+        --h1-font-size: 3rem;
+        --h2-font-size: 2.5rem;
+        --h3-font-size: 2rem;
+        --h4-font-size: 1.75rem;
+        --h5-font-size: 1.5rem;
+        --h6-font-size: 1.25rem;
+        --body-large-font-size: 1.25rem;
+        --body-font-size: 1rem;
+        --body-small-font-size: 0.75rem;
+        --body-extra-small-font-size: 0.625rem;
+        --footer-h2-font-size: 1.25rem;
+        --footer-h3-font-size: 1rem;
+
+        /* CSS Grid */
+        --grid-columns: repeat(12, minmax(0px, 1fr));
+        --grid-column-gutter: 1.5rem;
+        --grid-gap: 1.5rem; 
+    }
+}
+
+
+
+
+/* Global Styles */ 
+
+h1 {
+    font-size: var(--h1-font-size);
+   
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+    
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+    
+}
+
+h6 {
+    font-size: var(--h6-font-size); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: var(--heading-line-height);
+    font-family: var(--heading-font);
+    color: var(--font-color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+p, a, span, li, label, input, textarea, select {
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+    color: var(--font-color-black);
+}
+/* Global Classes */ 
+
+/* CSS Grid */
+.css-grid {
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+    grid-column-gap: var(--grid-column-gutter);
+    row-gap: var(--grid-gap);
+}
+
+/* Buttons */ 
+.button {
+    padding: var(--button-padding);
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--body-large-font-size);
+    background-color: var(--button-primary-background-color);
+    cursor: pointer;
+    border-radius: var(--rounded-corners);
+    box-shadow: var(--shadow-small);
+    color: var(--font-color-black);
+}
+
+.button.secondary {
+    background-color: var(--button-secondary-background-color);
+    color: var(--font-color-primary);
+}
+
+.button.tertiary {
+    background-color: var(--button-tertiary-background-color);
+    color: var(--font-color-primary);
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:focus {
+    outline: 2px solid var(--off-black-color)
+}
+
+/* Shadows */
+.shadow-regular {
+    box-shadow: var(--shadow-regular);
+    
+}
+
+/* Section Padding */ 
+.main-section-padding {
+    padding-top: var(--main-section-vertical-padding);
+    padding-bottom: var(--main-section-vertical-padding);
+}
+
+
+.sub-section-padding {
+    padding-top: var(--sub-section-vertical-padding);
+    padding-bottom: var(--sub-section-vertical-padding);
+}
+
+.section-horizontal-padding {
+    padding-left: var(--section-horizontal-padding);
+    padding-right: var(--section-horizontal-padding);
+}
+
+/* Padding */
+
+.padding-xs {
+    padding: var(--xs-padding);
+}
+
+.padding-s {
+    padding: var(--s-padding);
+}
+
+.padding-m {
+    padding: var(--m-padding);
+}
+
+.padding-l {
+    padding: var(--l-padding);
+}
+
+.padding-xl {
+    padding: var(--xl-padding);
+}
+
+.padding-xxl {
+    padding: var(--xxl-padding);
+}
+
+.padding-xxxl {
+    padding: var(--xxxl-padding);
+}
+
+.vertical-padding-xs {
+    padding-top: var(--xs-padding);
+    padding-bottom: var(--xs-padding);
+}
+
+.vertical-padding-s {
+    padding-top: var(--s-padding);
+    padding-bottom: var(--s-padding);
+}
+
+.vertical-padding-m {
+    padding-top: var(--m-padding);
+    padding-bottom: var(--m-padding);
+}
+
+.vertical-padding-l {
+    padding-top: var(--l-padding);
+    padding-bottom: var(--l-padding);
+}
+
+.vertical-padding-xl {
+    padding-top: var(--xl-padding);
+    padding-bottom: var(--xl-padding);
+}
+
+.vertical-padding-xxl {
+    padding-top: var(--xxl-padding);
+    padding-bottom: var(--xxl-padding);
+}
+
+.vertical-padding-xxxl {
+    padding-top: var(--xxxl-padding);
+    padding-bottom: var(--xxxl-padding);
+}
+
+.horizontal-padding-xs {
+    padding-left: var(--xs-padding);
+    padding-right: var(--xs-padding);
+}
+
+.horizontal-padding-s {
+    padding-left: var(--s-padding);
+    padding-right: var(--s-padding);
+}
+
+.horizontal-padding-m {
+    padding-left: var(--m-padding);
+    padding-right: var(--m-padding);
+}
+
+.horizontal-padding-l {
+    padding-left: var(--l-padding);
+    padding-right: var(--l-padding);
+}
+
+.horizontal-padding-xl {
+    padding-left: var(--xl-padding);
+    padding-right: var(--xl-padding);
+}
+
+.horizontal-padding-xxl {
+    padding-left: var(--xxl-padding);
+    padding-right: var(--xxl-padding);
+}
+
+.horizontal-padding-xxxl {
+    padding-left: var(--xxxl-padding);
+    padding-right: var(--xxxl-padding);
+}
+
+/* Spacing */
+.flex-gap-xs {
+    gap: var(--xs-gap);
+}
+
+.flex-gap-s {
+    gap: var(--s-gap);
+}
+
+.flex-gap-m {
+    gap: var(--m-gap);
+}
+
+.flex-gap-l {
+    gap: var(--l-gap);
+}
+
+.flex-gap-xl {
+    gap: var(--xl-gap);
+}
+
+.flex-gap-xxl {
+    gap: var(--xxl-gap);
+}
+
+/* Background Colours */
+.main-background-color {
+    background-color: var(--main-background-color);
+}
+
+.secondary-background-color {
+    background-color: var(--secondary-background-color);
+}
+
+/* Foreground Colours */
+.main-foreground-color {
+    background-color: var(--main-foreground-color);
+}
+
+.secondary-foreground-color {
+    background-color: var(--secondary-foreground-color);
+}
+
+.accent-color {
+    background-color: var(--accent-color);
+}
+
+.success-color {
+    background-color: var(--success-color);
+}
+
+.error-color {
+    background-color: var(--error-color);
+}
+
+/* Flexbox */ 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container {
+    max-width: 1280px; 
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
