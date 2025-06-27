@@ -1,4 +1,8 @@
 import { Helmet } from "react-helmet";
+import NavBar from "../components/navbar/NavBar";
+import '../styles/jasperminimalreset.css';
+import '../styles/jaspernormalize.css'; 
+import '../styles/designsystem.css'
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -21,8 +25,11 @@ export default function Home() {
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+      <NavBar />
       <h1>Welcome to My Site</h1>
       <p>This is the home page.</p>
+      
+
     </>
   );
 }

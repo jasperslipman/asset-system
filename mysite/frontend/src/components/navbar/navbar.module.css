@@ -1,0 +1,11 @@
+.navbar {
+    background-color: snow;
+    
+}
+
+.logo {
+    grid-column: 4 / 6;
+    width: 50%;
+    position: center;
+    justify-self: center;
+}
